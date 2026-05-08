@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "randpick"
+version = "0.1.0"
+description = "Weighted random sampling helpers — Vose's alias method, cumulative-bisect, Efraimidis-Spirakis without replacement, all pure-Python."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Nripanka Das", email = "nripankadas@gmail.com" }]
+requires-python = ">=3.10"
+keywords = ["random", "weighted", "sampling", "alias-method", "vose", "efraimidis-spirakis", "categorical"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Mathematics",
+  "Topic :: Utilities",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Repository = "https://github.com/nripankadas07/randpick"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+randpick = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+strict = true
